@@ -5,14 +5,13 @@ import {useHistory} from 'react-router-dom';
  const AddUser = () => {
      let history =useHistory();
      const [ user,setUser ] = useState({
-         name:"",
          userId:"",
          id:"",
          title:"",
          body:"",
      });
 
-     const {name, userId, id, title, body} = user;
+     const {userId, id, title, body} = user;
      const onInputChange = e => {
          setUser({...user,[e.target.name]: e.target.value});
      };
@@ -27,16 +26,6 @@ import {useHistory} from 'react-router-dom';
             <div className="w-75 mx-auto shadow p-5">
                 <h2 className="text-center mb-4">Add a user</h2>
                 <form onSubmit={e => onSubmit(e)}>
-                    <div className="form-group">
-                        <input  
-                            type="text"
-                            className="form-control form-control-lg"
-                            placeholder="Enter your Name"
-                            name="name"
-                            value={name}
-                            onChange={e=> onInputChange(e)}
-                        />    
-                    </div>
                     <div className="form-group">
                         <input  
                             type="text"
@@ -80,7 +69,7 @@ import {useHistory} from 'react-router-dom';
                     <button className="btn btn-primary btn-block">Add User</button>
                 </form>
             </div>
-            </div>
+        </div>
     );
         
     }

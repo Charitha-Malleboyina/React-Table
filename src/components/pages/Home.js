@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react';
 import axios from "axios";
 import { Link } from 'react-router-dom';
 
-const Home = () =>{
+    const Home = () =>{
     const [users, setUser] = useState([]);
 
     useEffect(() => {
@@ -44,14 +44,15 @@ const Home = () =>{
                                 <td>{user.title}</td>
                                 <td>{user.body}</td>
                                 <td>
-                                    <Link class="btn btn-primary my-lg-0"  to={`/users/${user.id}`}>View</Link>
-                                    </td>
-                                    <td>
-                                    
-                                    <Link class="btn btn-outline-primary my-lg-0" to={`/users/edit/${user.id}`}>Edit</Link>
-                                    </td>
-                                    <td>
-                                    <Link class="btn btn-danger" my-lg-0 onClick={()=> deleteUser(user.id)}>Delete</Link>
+                                    <Link class="btn btn-primary"  to={`/users/${user.id}`}>View</Link>
+                                </td>
+                                <td>
+                                    <Link class="btn btn-outline-primary" to={`/users/edit/${user.id}`}>Edit</Link>
+                                </td>
+                                <td>
+                                    <Link class="btn btn-danger" onClick={()=>{
+                                        const confirmBox = window.confirm("Do you really want to delete this Crumb?") 
+                                        deleteUser(user.id)}}>Delete</Link>
                                 </td>
                             </tr>
                         ))}

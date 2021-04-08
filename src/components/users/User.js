@@ -4,7 +4,6 @@ import axios from "axios";
 
 const User = () => {
     const [user, setUser ] = useState({
-        name:"",
          userid:"",
          id:"",
          title:"",
@@ -28,12 +27,10 @@ const User = () => {
             <h1 className="display-4">User Id:{idnum}</h1>
             <hr/>
             <ul className="list=group w-50">
-                <li className="list-group-item">name:{user.name}</li>
                 <li className="list-group-item">userid:{user.userId}</li>
                 <li className="list-group-item">id:{user.id}</li>
                 <li className="list-group-item">title:{user.title}</li>
-                <li className="list-group-item">:{user.body}</li>
-
+                <li className="list-group-item">body:{user.body}</li>
             </ul>
         </div>
     );
