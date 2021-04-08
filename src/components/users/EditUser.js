@@ -7,13 +7,13 @@ import {useHistory,useParams} from 'react-router-dom';
      const {idnum} = useParams();
      const [ user,setUser ] = useState({
          name:"",
-         userid:"",
+         userId:"",
          id:"",
          title:"",
          body:"",
      });
 
-     const {name, userid, id, title, body} = user;
+     const {name, userId, id, title, body} = user;
      const onInputChange = e => {
          setUser({...user,[e.target.name]: e.target.value});
      };
@@ -52,8 +52,8 @@ const loadUser = async () => {
                             type="text"
                             className="form-control form-control-lg"
                             placeholder="Enter your UserId"
-                            name="userid"
-                            value={userid}
+                            name="userId"
+                            value={userId}
                             onChange={e=> onInputChange(e)}
                         />    
                     </div>

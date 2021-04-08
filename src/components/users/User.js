@@ -29,7 +29,7 @@ const User = () => {
             <hr/>
             <ul className="list=group w-50">
                 <li className="list-group-item">name:{user.name}</li>
-                <li className="list-group-item">userid:{user.userid}</li>
+                <li className="list-group-item">userid:{user.userId}</li>
                 <li className="list-group-item">id:{user.id}</li>
                 <li className="list-group-item">title:{user.title}</li>
                 <li className="list-group-item">:{user.body}</li>
