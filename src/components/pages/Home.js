@@ -30,8 +30,9 @@ const Home = () =>{
                             <th>Id</th>
                             <th>title</th>
                             <th>body</th>
-                            <th >Action</th>
-                            
+                            <th></th>
+                            <th></th>
+                            <th>Action</th>
                         </tr>
                     </thead>          
                     <tbody>
@@ -44,7 +45,12 @@ const Home = () =>{
                                 <td>{user.body}</td>
                                 <td>
                                     <Link class="btn btn-primary my-lg-0"  to={`/users/${user.id}`}>View</Link>
+                                    </td>
+                                    <td>
+                                    
                                     <Link class="btn btn-outline-primary my-lg-0" to={`/users/edit/${user.id}`}>Edit</Link>
+                                    </td>
+                                    <td>
                                     <Link class="btn btn-danger" my-lg-0 onClick={()=> deleteUser(user.id)}>Delete</Link>
                                 </td>
                             </tr>
